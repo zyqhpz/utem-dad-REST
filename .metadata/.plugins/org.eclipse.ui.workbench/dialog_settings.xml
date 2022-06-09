@@ -10,6 +10,9 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/zyqq/Downloads/UTeM/DAD/Week 13/setupfiles/jsps"/>
+			<item value="/home/zyqq/Downloads/UTeM/DAD/Week 13/setupfiles/ee_codes"/>
+			<item value="/home/zyqq/Downloads/UTeM/DAD/Week 13/setupfiles/apis"/>
 			<item value="E:\UTeM\Sem 4\DAD\13\code"/>
 		</list>
 	</section>

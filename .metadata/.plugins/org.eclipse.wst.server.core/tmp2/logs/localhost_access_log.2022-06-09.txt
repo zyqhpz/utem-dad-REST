@@ -1,0 +1,14 @@
+127.0.0.1 - - [09/Jun/2022:14:47:48 +0800] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [09/Jun/2022:14:47:49 +0800] "GET /RESTEEClient/ HTTP/1.1" 404 768
+127.0.0.1 - - [09/Jun/2022:14:49:31 +0800] "GET /RESTEEClient/ HTTP/1.1" 200 481
+127.0.0.1 - - [09/Jun/2022:14:49:32 +0800] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [09/Jun/2022:14:50:03 +0800] "GET /RESTEEClient/ HTTP/1.1" 200 481
+127.0.0.1 - - [09/Jun/2022:14:50:07 +0800] "GET /RESTEEClient/professor.jsp HTTP/1.1" 200 230
+127.0.0.1 - - [09/Jun/2022:14:50:09 +0800] "GET /RESTEEClient/validateForm.jsp HTTP/1.1" 200 377
+127.0.0.1 - - [09/Jun/2022:14:50:14 +0800] "POST /RESTEEClient/validationServlet HTTP/1.1" 200 197
+127.0.0.1 - - [09/Jun/2022:14:50:18 +0800] "GET /RESTEEClient/professor.jsp HTTP/1.1" 200 230
+127.0.0.1 - - [09/Jun/2022:14:50:25 +0800] "GET /RESTEEClient/validateForm.jsp HTTP/1.1" 200 377
+127.0.0.1 - - [09/Jun/2022:14:50:27 +0800] "POST /RESTEEClient/validationServlet HTTP/1.1" 200 204
+127.0.0.1 - - [09/Jun/2022:14:50:42 +0800] "POST /RESTEEClient/validationServlet HTTP/1.1" 200 200
+127.0.0.1 - - [09/Jun/2022:14:53:43 +0800] "GET /RESTEEClient/validateForm.jsp HTTP/1.1" 200 377
+127.0.0.1 - - [09/Jun/2022:14:53:47 +0800] "POST /RESTEEClient/validationServlet HTTP/1.1" 200 195
