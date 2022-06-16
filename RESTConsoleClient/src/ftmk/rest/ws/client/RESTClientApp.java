@@ -1,10 +1,8 @@
 
-
 package ftmk.rest.ws.client;
 
-
 /**
- * This code demonstrate the call made to web services host in 
+ * This code demonstrate the call made to web services host in
  * http://localhost:8080/RESTProvider/ and process JSON response.
  * 
  * How to use this code?
@@ -20,40 +18,43 @@ public class RESTClientApp {
 	 * 
 	 * @param args
 	 */
-	public static void main (String args[]) {
-		
+	public static void main(String args[]) {
+
 		System.out.println("\nThis application demonstrate consuming "
 				+ "web service data");
-		
-		
+
 		RESTClientManager client = new RESTClientManager();
-		
-		String names[] = {"Flitwick", "Severus Snape", "albus dumbledore", 
-			"Albus Dumbledore"};
-		
+
+		String names[] = { "Flitwick", "Severus Snape", "albus dumbledore",
+				"Albus Dumbledore" };
+
 		try {
-			
-			client.getMessage(); 
-			
-			/*for (String name:names)
-				client.validateTeacher(name); */
-						
-			//client.getTeachersSubject();
-			
-			//client.getTeachers(); 
-			
-			// client.addTeacher();  // Error
-			
-			//client.getFixedTeacher(); 
-			
+
+			// client.getMessage();
+
+			/*
+			 * for (String name:names)
+			 * client.validateTeacher(name);
+			 */
+
+			// client.getTeachersSubject();
+
+			// client.getTeachers();
+
+			// client.addTeacher(); // Error
+
+			// client.getFixedTeacher();
+
+			// client.getCountTeacher();
+
+			client.getNamelistBySurname();
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
-		
+		}
+
 		System.out.println("\n\nEnd of excution for RESTClientApp");
 	}
 
-	
-	
 }

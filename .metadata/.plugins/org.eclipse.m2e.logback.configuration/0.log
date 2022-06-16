@@ -2091,3 +2091,4 @@ java.net.URISyntaxException: Illegal character in path at index 16: file:/C:/Pro
 2022-06-09 21:09:44,246 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Programming\java\rest_ws\RESTProvider\src\main\resources
 2022-06-09 21:09:44,247 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-06-09 21:09:44,248 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Programming\java\rest_ws\RESTProvider\src\test\resources
+2022-06-15 21:30:55,183 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

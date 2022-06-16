@@ -1,0 +1,13 @@
+127.0.0.1 - - [16/Jun/2022:20:00:14 +0800] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [16/Jun/2022:20:03:53 +0800] "GET /RESTProvider/services/teacher HTTP/1.1" 200 86
+127.0.0.1 - - [16/Jun/2022:20:04:03 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 404 713
+127.0.0.1 - - [16/Jun/2022:20:06:55 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 23
+127.0.0.1 - - [16/Jun/2022:20:08:30 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 23
+127.0.0.1 - - [16/Jun/2022:20:12:09 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [16/Jun/2022:20:14:32 +0800] "GET /RESTProvider/services/teacher HTTP/1.1" 200 86
+127.0.0.1 - - [16/Jun/2022:20:17:44 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [16/Jun/2022:20:18:33 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [16/Jun/2022:20:30:51 +0800] "GET /RESTProvider/services/teacher/getNamelist HTTP/1.1" 200 191
+127.0.0.1 - - [16/Jun/2022:20:30:51 +0800] "GET /RESTProvider/services/teacher/getNamelist HTTP/1.1" 200 191
+127.0.0.1 - - [16/Jun/2022:20:31:50 +0800] "GET /RESTProvider/services/teacher/getNamelist HTTP/1.1" 200 191
+127.0.0.1 - - [16/Jun/2022:20:32:16 +0800] "GET /RESTProvider/services/teacher/getNamelist HTTP/1.1" 200 191
