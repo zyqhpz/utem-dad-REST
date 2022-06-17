@@ -30,6 +30,8 @@ Menu :
 <a href="validateForm.jsp">Validate Hogwarts Professor</a> &nbsp; &nbsp;
 
 <a href="countTeacher.jsp">Count Hogwarts Professor</a> &nbsp; &nbsp;
+<a href="searchProfessorNamelistForm.jsp">Search Professor</a> &nbsp; &nbsp;
+
 
 </body>
 </html>

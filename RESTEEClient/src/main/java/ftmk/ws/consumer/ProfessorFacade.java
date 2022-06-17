@@ -1,5 +1,6 @@
 package ftmk.ws.consumer;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -167,6 +168,83 @@ public class ProfessorFacade {
 		String jsonResponse = response.readEntity(String.class);
 
 		return jsonResponse;
+
+	}
+
+	/**
+	 * Get namelist of teacher by surname from user input
+	 * 
+	 * @return
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 */
+	public List<Professor> getNamelistBySurname(String surname) throws JSONException, JsonProcessingException {
+
+		List<Professor> professors = new ArrayList<Professor>();
+
+		webTarget = webTarget.path("getNamelist");
+
+		Response response = webTarget.request(MediaType.APPLICATION_JSON).get();
+
+		// Check response code
+		if (response.getStatus() != 200) {
+			// Display error message if response code is not 200
+
+			String error = "Error invoking REST web service";
+			error += "\n" + response.getStatusInfo().getReasonPhrase();
+
+			throw new JSONException(error);
+		}
+
+		// REST call is a success. Print the response
+		String jsonResponse = response.readEntity(String.class);
+
+		// Parse to Java object
+		ObjectMapper mapper = new ObjectMapper();
+		
+//		professors = mapper.readValue(jsonResponse, new TypeReference<List<Professor>>() {});
+//
+//		// Parse to Teacher object
+//		Map<String, Object> jsonMap = mapper.readValue(jsonResponse,
+//				new TypeReference<Map<String, Object>>() {
+//				});
+//
+//		// Stringified the response
+//		String parsedProfessor = jsonMap.get("name").toString();
+
+		// Parse to Java object
+		professors = mapper.readValue(jsonResponse, new TypeReference<List<Professor>>() {
+		});
+
+		// // Create object
+		// // Professor professor = new Professor();
+		// // professor.setName(queryName);
+
+		// // Parse teacher to JSON format
+		// ObjectMapper mapper = new ObjectMapper();
+		// // String jsonProfessor = mapper.writeValueAsString(professor);
+
+		// // Execute HTTP POST method
+		// // Response response = webTarget.request().post(Entity.entity(jsonProfessor,
+		// // MediaType.APPLICATION_JSON));
+
+		// // Check response code
+		// if (response.getStatus() != 200) {
+		// // Display error message if response code is not 200
+
+		// String error = "Error invoking REST web service";
+		// error += "\n" + response.getStatusInfo().getReasonPhrase();
+
+		// throw new JSONException(error);
+		// }
+
+		// // REST call is a success. Retrieve the output from Response.
+		// String jsonString = response.readEntity(String.class);
+
+		// Parse to boolean
+		// return Boolean.parseBoolean(jsonString);
+
+		return professors;
 
 	}
 

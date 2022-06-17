@@ -24,3 +24,8 @@
 0:0:0:0:0:0:0:1 - - [17/Jun/2022:20:42:55 +0800] "GET /RESTEEClient/countTeacher.jsp HTTP/1.1" 200 211
 0:0:0:0:0:0:0:1 - - [17/Jun/2022:20:43:28 +0800] "GET /RESTEEClient/countTeacher.jsp HTTP/1.1" 200 213
 0:0:0:0:0:0:0:1 - - [17/Jun/2022:20:43:36 +0800] "GET /RESTEEClient/countTeacher.jsp HTTP/1.1" 200 208
+0:0:0:0:0:0:0:1 - - [17/Jun/2022:21:15:33 +0800] "GET /RESTEEClient/index.jsp HTTP/1.1" 500 7621
+127.0.0.1 - - [17/Jun/2022:21:16:09 +0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Jun/2022:21:16:21 +0800] "GET /RESTEEClient/ HTTP/1.1" 500 7611
+0:0:0:0:0:0:0:1 - - [17/Jun/2022:21:17:16 +0800] "GET /RESTEEClient/index.jsp HTTP/1.1" 500 7621
+0:0:0:0:0:0:0:1 - - [17/Jun/2022:21:23:10 +0800] "GET /RESTEEClient/countTeacher.jsp HTTP/1.1" 500 7648
