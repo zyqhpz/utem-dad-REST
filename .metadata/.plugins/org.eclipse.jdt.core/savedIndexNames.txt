@@ -72,7 +72,6 @@ INDEX VERSION 1.131+E:\Programming\java\rest_ws\.metadata\.plugins\org.eclipse.j
 1687536342.index
 2000118319.index
 4159756157.index
-2430771856.index
 4229493768.index
 768462829.index
 1570237942.index

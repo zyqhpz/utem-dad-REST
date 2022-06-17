@@ -29,3 +29,15 @@
 0:0:0:0:0:0:0:1 - - [17/Jun/2022:20:29:36 +0800] "GET /RESTEEClient/countTeacher.jsp HTTP/1.1" 200 138
 0:0:0:0:0:0:0:1 - - [17/Jun/2022:20:30:33 +0800] "GET /RESTEEClient/ HTTP/1.1" 404 768
 127.0.0.1 - - [17/Jun/2022:20:30:39 +0800] "GET /RESTProvider/services/teacher HTTP/1.1" 200 86
+127.0.0.1 - - [17/Jun/2022:20:33:03 +0800] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [17/Jun/2022:20:36:24 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:37:48 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:37:55 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:37:56 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:37:56 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:40:56 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:41:00 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:41:56 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:42:55 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:43:28 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1
+127.0.0.1 - - [17/Jun/2022:20:43:36 +0800] "GET /RESTProvider/services/teacher/getNumTeacher HTTP/1.1" 200 1

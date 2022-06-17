@@ -168,24 +168,6 @@ public class ProfessorFacade {
 
 		return jsonResponse;
 
-		// // REST call is a success.
-		// String jsonString = response.readEntity(String.class);
-
-		// // Parse to Java object
-		// ObjectMapper mapper = new ObjectMapper();
-
-		// // Parse to Teacher object
-		// Map<String, Object> jsonMap = mapper.readValue(jsonString,
-		// new TypeReference<Map<String, Object>>() {
-		// });
-
-		// // Stringified the response
-		// // String parsedProfessor = jsonMap.get("name").toString();
-
-		// String parsedProfessor = jsonMap.toString();
-
-		// return parsedProfessor;
-
 	}
 
 }
