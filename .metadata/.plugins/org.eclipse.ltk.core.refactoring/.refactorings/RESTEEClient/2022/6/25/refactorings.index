@@ -1,2 +1,4 @@
-1655471441381	Rename resource 'searchProfessorName.jsp'
-1655471471213	Rename resource 'searchProfessorNameForm.jsp'
+1655473697167	Move 'searchProfessorNamelistForm.jsp' to 'webapp'
+1655473843868	Rename resource 'CountTeacherServlet.java'
+1655474045606	Delete element
+1655474163981	Move 'searchProfessorNamelistResult.jsp' to 'webapp'

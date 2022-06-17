@@ -11,7 +11,7 @@
 <br><br>
 Enter a surname of professor that you want to search.
 <br><br>
-<form action="teacherNamelistServlet" method="GET">
+<form action="searchTeacherServlet" method="GET">
 
 Name: <input type="text" name="surname">
 
