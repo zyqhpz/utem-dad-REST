@@ -18,73 +18,68 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ftmk.exception.JSONException;
 import ftmk.model.Professor;
 
-
 public class ProfessorFacade {
-	
+
 	private Client client;
 	private WebTarget webTarget;
-	
-	public ProfessorFacade () {
-		
+
+	public ProfessorFacade() {
+
 		// Create JAX-RS client
 		client = ClientBuilder.newClient();
 
 		// Get WebTarget for URL
 		webTarget = client.target("http://localhost:8080/RESTProvider/services/teacher");
-		
+
 	}
-	
-	
-	public boolean validateProfesstor (String queryName) throws JSONException, JsonProcessingException {
-		
-		
+
+	public boolean validateProfesstor(String queryName) throws JSONException, JsonProcessingException {
+
 		webTarget = webTarget.path("validateteacher");
 
-		// Create object 
+		// Create object
 		Professor professor = new Professor();
 		professor.setName(queryName);
-		
+
 		// Parse teacher to JSON format
 		ObjectMapper mapper = new ObjectMapper();
 		String jsonProfessor = mapper.writeValueAsString(professor);
 
 		// Execute HTTP POST method
 		Response response = webTarget.request().post(Entity.entity(jsonProfessor, MediaType.APPLICATION_JSON));
-		
+
 		// Check response code
 		if (response.getStatus() != 200) {
 			// Display error message if response code is not 200
 
 			String error = "Error invoking REST web service";
 			error += "\n" + response.getStatusInfo().getReasonPhrase();
-			
+
 			throw new JSONException(error);
 		}
-		
+
 		// REST call is a success. Retrieve the output from Response.
 		String jsonString = response.readEntity(String.class);
-		
+
 		// Parse to boolean
 		return Boolean.parseBoolean(jsonString);
-		
-		
+
 	}
-	
-	
+
 	/**
 	 * Get a fixed professor from Hogwarts
+	 * 
 	 * @return
 	 * @throws JsonMappingException
 	 * @throws JsonProcessingException
 	 */
-	public String getFixedProfessor () throws JsonMappingException, JsonProcessingException {
-		
+	public String getFixedProfessor() throws JsonMappingException, JsonProcessingException {
+
 		// Add path
 		webTarget = webTarget.path("getteacher");
-		
+
 		// Execute HTTP GET method
 		Response response = webTarget.request(MediaType.APPLICATION_JSON).get();
-
 
 		// Check response code
 		if (response.getStatus() != 200) {
@@ -92,56 +87,105 @@ public class ProfessorFacade {
 
 			String error = "Error invoking REST web service";
 			error += "\n" + response.getStatusInfo().getReasonPhrase();
-			
+
 			return error;
 
 		}
 
-		// REST call is a success.  
+		// REST call is a success.
 		String jsonString = response.readEntity(String.class);
 
 		// Parse to Java object
 		ObjectMapper mapper = new ObjectMapper();
 
 		// Parse to Teacher object
-		Map<String, Object> jsonMap = mapper.readValue(jsonString, 
-				new TypeReference<Map<String,Object>>(){});
-		
+		Map<String, Object> jsonMap = mapper.readValue(jsonString,
+				new TypeReference<Map<String, Object>>() {
+				});
+
 		// Stringified the response
 		String parsedProfessor = jsonMap.get("name").toString();
-		
+
 		return parsedProfessor;
 
 	}
-	
-	
+
 	/**
 	 * Get default message from the web service
+	 * 
 	 * @return
 	 */
-	public String getDefaultMessage () {
-		
+	public String getDefaultMessage() {
+
 		// Execute HTTP GET method
 		Response response = webTarget.request().get();
-		
+
 		// Check response code
 		if (response.getStatus() != 200) {
 			// Display error message if response code is not 200
-			
+
 			String error = "Error invoking REST web service";
 			error += "\n" + response.getStatusInfo().getReasonPhrase();
-			
+
 			return error;
 		}
-		
-		// REST call is a success.  Print the response
+
+		// REST call is a success. Print the response
 		String jsonResponse = response.readEntity(String.class);
-		
+
 		return jsonResponse;
-		
+
 	}
-	
-	
-	
+
+	/**
+	 * Get a fixed professor from Hogwarts
+	 * 
+	 * @return
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 */
+	public String getNumTeacher() throws JsonMappingException, JsonProcessingException {
+
+		// Add path
+		webTarget = webTarget.path("getNumTeacher");
+
+		// Execute HTTP GET method
+		Response response = webTarget.request(MediaType.TEXT_PLAIN).get();
+
+		// Check response code
+		if (response.getStatus() != 200) {
+			// Display error message if response code is not 200
+
+			String error = "Error invoking REST web service";
+			error += "\n" + response.getStatusInfo().getReasonPhrase();
+
+			return error;
+
+		}
+
+		// get the response
+		String jsonResponse = response.readEntity(String.class);
+
+		return jsonResponse;
+
+		// // REST call is a success.
+		// String jsonString = response.readEntity(String.class);
+
+		// // Parse to Java object
+		// ObjectMapper mapper = new ObjectMapper();
+
+		// // Parse to Teacher object
+		// Map<String, Object> jsonMap = mapper.readValue(jsonString,
+		// new TypeReference<Map<String, Object>>() {
+		// });
+
+		// // Stringified the response
+		// // String parsedProfessor = jsonMap.get("name").toString();
+
+		// String parsedProfessor = jsonMap.toString();
+
+		// return parsedProfessor;
+
+	}
 
 }

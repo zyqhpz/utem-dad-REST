@@ -27,11 +27,9 @@ Message from Web Service: <%= message %>
 Menu : 
 
 <a href="professor.jsp">Default Hogwarts Professor</a> &nbsp; &nbsp;
-<a href="validateForm.jsp">Validate Hogwarts Professor</a>
+<a href="validateForm.jsp">Validate Hogwarts Professor</a> &nbsp; &nbsp;
 
-
-
-
+<a href="countTeacher.jsp">Count Hogwarts Professor</a> &nbsp; &nbsp;
 
 </body>
 </html>
