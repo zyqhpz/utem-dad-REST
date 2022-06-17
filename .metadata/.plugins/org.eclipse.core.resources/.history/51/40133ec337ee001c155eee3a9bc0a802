@@ -1,6 +1,5 @@
 package hogwarts.rest.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -9,7 +8,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -191,54 +189,4 @@ public class TeacherService {
 		return text;
 	}
 
-	/**
-	 * This method demonstrate a GET service and count number of teachers
-	 * 
-	 * @return
-	 */
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/getNumTeacher")
-	public int getNumberOfTeachers() {
-
-		List<Teacher> teachers = new TeacherRepository().getHogwartTeachers();
-
-		return teachers.size();
-	}
-
-	/**
-	 * This method demonstrate a GET service
-	 * return a namelist by surname based on user input string
-	 * 
-	 * @return
-	 */
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/getNamelist")
-	public List<Teacher> getTeacherNamelist(@QueryParam("surname") String surname) {
-
-		// read the string parameter from the request
-		String searchParameter = surname;
-
-		// get the list of teachers from the repository
-		List<Teacher> teachers = new TeacherRepository().getHogwartTeachers();
-
-		// create a new list to store the teachers with the name contains the
-		// input string
-		List<Teacher> namelist = new ArrayList<Teacher>();
-
-		// loop through the list of teachers
-		for (Teacher teacher : teachers) {
-
-			// split the name into first and surname
-			String[] name = teacher.getName().split(" ");
-
-			// if the surname contains the input string, add to the list
-			if (name[1].toLowerCase().contains(searchParameter.toLowerCase())) {
-				namelist.add(teacher);
-			}
-		}
-
-		return namelist;
-	}
 }
